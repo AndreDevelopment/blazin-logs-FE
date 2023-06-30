@@ -9,7 +9,7 @@ function App() {
   const gameModes = ["3v3", "Solo", "Duels", "Duos", "Total"];
   return (
     <>
-      <div className="w-full fixed z-[1]">
+      <div className="w-full fixed z-[1] drop-shadow-xl">
         <NavBar onRefresh={() => fetchData()} onUpdate={() => updateData()} />
       </div>
       {update && <h1>{update}</h1>}
