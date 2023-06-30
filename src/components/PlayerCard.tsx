@@ -16,8 +16,8 @@ const PlayerCard = ({ battleWin }: Props) => {
   const imageList = [_3v3, Solo, Duels, Duos, Total];
 
   return (
-    <div className="w-[900px] flex flex-row-3 font-['Monomaniac_One',sans-serif] mb-4 justify-between">
-      <div className="flex flex-col ">
+    <div className="w-[900px] flex md:flex-row flex-col font-['Monomaniac_One',sans-serif] mb-4 justify-between items-center">
+      <div className="flex flex-col md:mb-0 mb-2 items-center md:items-start">
         <h1
           style={{
             color: "#" + battleWin.player.nameColor.substring(4),
@@ -27,7 +27,7 @@ const PlayerCard = ({ battleWin }: Props) => {
         </h1>
         <h2>W/R: {battleWin.winRate.toFixed(2)}</h2>
       </div>
-      <div className="flex flex-row  w-[660px] justify-evenly">
+      <div className="flex flex-row  w-[660px] md:justify-evenly justify-center">
         {battleWin.wins.map((win, idx) => (
           <Segment key={imageList[idx]} count={win} image={imageList[idx]} />
         ))}
