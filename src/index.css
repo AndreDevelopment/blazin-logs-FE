@@ -1,11 +1,11 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Monomaniac+One&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Monomaniac+One&display=swap');
+
 body{
   background-color: black;
   color: white;
-  font-family: 'Monomaniac One';
+  
 }
