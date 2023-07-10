@@ -4,11 +4,20 @@ import { CanceledError } from "axios";
  export interface BattleWin{
 
     _id:string,
+    totalBattles: number,
+    totalVictories: number,
     battleTime: string,
     player: Player,
-    wins: number[],
+    wins: { [key: string]: GameWin},
     winRate: number
     
+}
+
+export interface GameWin{
+
+    totalBattles: number,
+    totalVictories: number,
+    winRate: number
 }
 
  export interface Player{
