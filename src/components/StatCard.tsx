@@ -36,7 +36,7 @@ const StatCard = ({ wins, gameModes }: Props) => {
   };
 
   return (
-    <div className="flex flex-row justify-evenly w-full">
+    <div className="inline-flex  w-full items-center justify-center">
       {gameModes.map((mode) => (
         <Segment
           key={mode}
