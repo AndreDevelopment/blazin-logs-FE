@@ -20,27 +20,28 @@ interface Props {
 }
 
 const StatCard = ({ wins, gameModes }: Props) => {
-  const imageMap = [
-    gemGrab,
-    soloShowdown,
-    duoShowdown,
-    brawlBall,
-    heist,
-    bounty,
-    knockout,
-    hotZone,
-    takedown,
-    duels,
-    wipeout,
-    volleyBrawl,
-  ];
+  const imageMap: { [key: string]: string } = {
+    gemGrab: gemGrab,
+    soloShowdown: soloShowdown,
+    duoShowdown: duoShowdown,
+    brawlBall: brawlBall,
+    heist: heist,
+    bounty: bounty,
+    knockout: knockout,
+    hotZone: hotZone,
+    takedown: takedown,
+    duels: duels,
+    wipeout: wipeout,
+    volleyBrawl: volleyBrawl,
+  };
 
   return (
     <div className="flex flex-row justify-evenly w-full">
       {gameModes.map((mode) => (
         <Segment
-          count={wins[mode].totalBattles}
-          image={imageMap[imageMap.indexOf(mode)]}
+          key={mode}
+          count={wins[mode].totalVictories}
+          image={imageMap[mode]}
         />
       ))}
     </div>

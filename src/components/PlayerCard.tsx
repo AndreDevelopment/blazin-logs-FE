@@ -7,11 +7,11 @@ interface Props {
 }
 
 const PlayerCard = ({ battleWin }: Props) => {
-  const gameModes = [["gemGrab", "soloShowdown", "duoShowdown", "brawlBall"]];
+  const gameModes = [["gemGrab", "soloShowdown", "bounty", "brawlBall"]];
 
   /**    ["hotZone", "bounty", "knockout", "takedown"],
     ["wipeout", "duels", "heist", "volleyBrawl"], */
-  console.log(battleWin);
+
   return (
     <div className="w-[900px] flex md:flex-row flex-col font-['Monomaniac_One',sans-serif] mb-4 justify-between items-center">
       <div className="flex flex-col md:mb-0 mb-2 items-center md:items-start">
@@ -24,14 +24,18 @@ const PlayerCard = ({ battleWin }: Props) => {
         </h1>
         <h2>W/R: {battleWin.winRate.toFixed(2)}</h2>
       </div>
-      <div className="flex flex-row  w-[660px] bg-green">
-        <button className="w-12"> &lt;</button>
-        <div className="w-[500px] absolute bg-red">
+      <div className="flex flex-row justify-evenly w-[700px]">
+        <button className="p-2 border-solid border-2 border-gray-500 rounded-md text-1xl hover:bg-gray-600">
+          &lt;
+        </button>
+        <div className="">
           {gameModes.map((card) => (
             <StatCard gameModes={card} wins={battleWin.wins} />
           ))}
         </div>
-        <button className="w-12"> &gt;</button>
+        <button className="p-2 border-solid border-2 border-gray-500 rounded-md text-1xl  hover:bg-gray-600">
+          &gt;
+        </button>
       </div>
     </div>
   );
