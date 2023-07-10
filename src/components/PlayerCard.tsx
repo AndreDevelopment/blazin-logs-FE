@@ -35,8 +35,16 @@ const PlayerCard = ({ battleWin }: Props) => {
           className="md:text-3xl text-2xl">
           {battleWin.player.name}
         </h1>
-        <h2>W/R: {battleWin.winRate.toFixed(2)}</h2>
+        <div className="flex flex-row">
+          <h2 className="text-gray-300 mr-2">W/R: </h2>
+          <h2>{battleWin.winRate.toFixed(2)}</h2>
+        </div>
+        <div className="flex flex-row">
+          <h2 className="text-gray-300 mr-2">Total Battles: </h2>
+          <h2>{battleWin.totalBattles}</h2>
+        </div>
       </div>
+
       <div className="flex flex-row w-[700px]">
         <button
           className="p-2 border-solid border-2 border-gray-500 rounded-md text-1xl hover:bg-gray-600"
