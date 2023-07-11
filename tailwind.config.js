@@ -7,6 +7,7 @@ export default {
     colors:{
       green :"#32a852",
       red: "#a83232",
+      blue:"#0f4fb8",
       gray:{
          50: '#f9f9f9',
          100: '#ededed',
