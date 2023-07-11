@@ -16,7 +16,7 @@ function App() {
         <NavBar onRefresh={() => fetchData()} onUpdate={() => updateData()} />
       </div>
 
-      <div className="w-full flex justify-center items-center mt-28">
+      <div className="w-full flex justify-center items-center mt-32">
         <StatSelector selected={selectedStat} setSelected={setSelectedStat} />
       </div>
 

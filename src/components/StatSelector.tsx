@@ -7,7 +7,7 @@ interface Props {
 }
 
 const StatSelector = ({ selected, setSelected }: Props) => {
-  const options = ["Total Battles", "Victories", "Win Rate"];
+  const options = ["Victories", "Total Battles", "Win Rate"];
 
   const [active, setActive] = useState(false);
   return (
