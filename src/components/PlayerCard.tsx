@@ -5,9 +5,10 @@ import "../index.css";
 import StatCard from "./StatCard";
 interface Props {
   battleWin: BattleWin;
+  selectedStat: string;
 }
 
-const PlayerCard = ({ battleWin }: Props) => {
+const PlayerCard = ({ battleWin, selectedStat }: Props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const gameModes = [
     ["gemGrab", "soloShowdown", "bounty", "brawlBall"],
@@ -58,8 +59,13 @@ const PlayerCard = ({ battleWin }: Props) => {
           <div
             className="whitespace-nowrap duration-[0.3s] transition-transform "
             style={{ transform: `translate(-${activeIndex * 100}%)` }}>
-            {gameModes.map((card) => (
-              <StatCard gameModes={card} wins={battleWin.wins} />
+            {gameModes.map((card, idx) => (
+              <StatCard
+                key={idx}
+                gameModes={card}
+                wins={battleWin.wins}
+                selectedStat={selectedStat}
+              />
             ))}
           </div>
         </div>

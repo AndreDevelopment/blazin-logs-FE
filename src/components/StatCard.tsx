@@ -17,9 +17,10 @@ import duels from "../assets/Duels.png";
 interface Props {
   wins: { [key: string]: GameWin };
   gameModes: string[];
+  selectedStat: string;
 }
 
-const StatCard = ({ wins, gameModes }: Props) => {
+const StatCard = ({ wins, gameModes, selectedStat }: Props) => {
   const imageMap: { [key: string]: string } = {
     gemGrab: gemGrab,
     soloShowdown: soloShowdown,
@@ -40,7 +41,13 @@ const StatCard = ({ wins, gameModes }: Props) => {
       {gameModes.map((mode) => (
         <Segment
           key={mode}
-          count={wins[mode].totalVictories}
+          count={
+            selectedStat === "Total Battles"
+              ? wins[mode].totalBattles.toString()
+              : selectedStat === "Victories"
+              ? wins[mode].totalVictories.toString()
+              : Number(wins[mode].winRate).toFixed(2)
+          }
           image={imageMap[mode]}
         />
       ))}

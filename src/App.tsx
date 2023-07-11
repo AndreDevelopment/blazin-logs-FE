@@ -8,7 +8,7 @@ import useUpdateWins from "./hooks/useUpdateWin";
 function App() {
   const { battleWins, error, fetchData } = useBattleWins();
   const { update, updateData } = useUpdateWins();
-  const [selectedStat, setSelectedStat] = useState("");
+  const [selectedStat, setSelectedStat] = useState("Victories");
 
   return (
     <>
@@ -24,7 +24,11 @@ function App() {
 
       <div className="w-full relative mt-8 flex flex-col items-center">
         {battleWins.map((battleWin) => (
-          <PlayerCard key={battleWin._id} battleWin={battleWin} />
+          <PlayerCard
+            key={battleWin._id}
+            battleWin={battleWin}
+            selectedStat={selectedStat}
+          />
         ))}
       </div>
     </>

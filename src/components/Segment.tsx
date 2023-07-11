@@ -1,7 +1,7 @@
 import "../index.css";
 
 interface Props {
-  count: number;
+  count: string;
   image: string;
 }
 
