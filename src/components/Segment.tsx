@@ -13,8 +13,8 @@ const Segment = ({ count, image }: Props) => {
           src={image}
           className="box-border  skew-x-[15deg] md:h-12 md:w-12 h-10 w-10 m-1 "></img>
       </div>
-      <div className="w-[50%] flex flex-row justify-center">
-        <h1 className=" md:text-2xl  text-[16px] skew-x-[15deg] my-2 md:my-0 ">
+      <div className="w-[50%] flex flex-row justify-center mx-1">
+        <h1 className=" md:text-2xl  text-[16px] skew-x-[15deg] my-2 md:my-0">
           {count}
         </h1>
       </div>

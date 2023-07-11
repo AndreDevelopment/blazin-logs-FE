@@ -19,8 +19,6 @@ function App() {
       <div className="w-full flex justify-center items-center mt-28">
         <StatSelector selected={selectedStat} setSelected={setSelectedStat} />
       </div>
-      {/* {update && <h1>{update}</h1>}
-      {error && <h1>{error}</h1>} */}
 
       <div className="w-full relative mt-8 flex flex-col items-center">
         {battleWins.map((battleWin) => (
@@ -31,6 +29,8 @@ function App() {
           />
         ))}
       </div>
+      {update && <h1>{update}</h1>}
+      {error && <h1>{error}</h1>}
     </>
   );
 }

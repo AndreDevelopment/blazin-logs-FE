@@ -11,7 +11,7 @@ const NavBar = ({ onRefresh, onUpdate }: Props) => {
   return (
     <div className="w-full py-4 px-4 bg-gray-900">
       <div className=" mx-auto flex flex-row justify-between items-center">
-        <h1 className="md:text-4xl text-3xl font-['Carter_One',sans-serif] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-50 to-gray-900">
+        <h1 className="md:text-4xl text-3xl font-['Carter_One',sans-serif] ">
           Blazin' Brawler Logs
         </h1>
         <div className="p-4 flex flex-row space-x-2">
