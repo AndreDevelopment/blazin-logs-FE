@@ -46,6 +46,8 @@ const StatCard = ({ wins, gameModes, selectedStat }: Props) => {
               ? wins[mode].totalBattles.toString()
               : selectedStat === "Victories"
               ? wins[mode].totalVictories.toString()
+              : Number(wins[mode].winRate).toFixed(2) === "NaN"
+              ? "0"
               : Number(wins[mode].winRate).toFixed(2)
           }
           image={imageMap[mode]}
