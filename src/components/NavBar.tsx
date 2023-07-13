@@ -9,7 +9,7 @@ interface Props {
 
 const NavBar = ({ onRefresh, onUpdate }: Props) => {
   return (
-    <div className="w-full py-4 px-4 bg-gray-900">
+    <div className="w-full py-4 px-4 bg-gray-800">
       <div className=" mx-auto flex flex-row justify-between items-center">
         <h1 className="md:text-4xl text-3xl font-['Carter_One',sans-serif] ">
           Blazin' Brawler Logs

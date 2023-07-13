@@ -12,7 +12,7 @@ const StatSelector = ({ selected, setSelected }: Props) => {
   const [active, setActive] = useState(false);
   return (
     <div
-      className={"flex flex-col justify-start items-center w-[200px] text-2xl font-['Monomaniac_One',sans-serif] bg-gray-700 p-2 border-solid border-gray-500 border-2 ".concat(
+      className={"flex flex-col justify-start items-center w-[180px] text-2xl font-['Monomaniac_One',sans-serif] bg-gray-700 p-2 border-solid border-gray-500 border-2 ".concat(
         !active ? " rounded-md" : " rounded-t-md"
       )}>
       <button
@@ -24,7 +24,7 @@ const StatSelector = ({ selected, setSelected }: Props) => {
         </div>
       </button>
       {active && (
-        <ul className="rounded-b-md flex flex-col items-center absolute bg-gray-700 z-[1] mt-10 w-[200px] border-solid border-gray-500 border-2 border-t-0 pb-2">
+        <ul className="rounded-b-md flex flex-col items-center absolute bg-gray-700 z-[1] mt-10 w-[180px] border-solid border-gray-500 border-2 border-t-0 pb-2">
           {options.map((option) => (
             <li className="hover:bg-gray-600 px-2 rounded-md">
               <span

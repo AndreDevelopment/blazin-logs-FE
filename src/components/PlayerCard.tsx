@@ -12,8 +12,8 @@ const PlayerCard = ({ battleWin, selectedStat }: Props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const gameModes = [
     ["gemGrab", "soloShowdown", "bounty", "brawlBall"],
-    ["hotZone", "duoShowdown", "knockout", "takedown"],
-    ["wipeout", "duels", "heist", "volleyBrawl"],
+    ["hotZone", "duoShowdown", "knockout", "heist"],
+    ["wipeout", "duels", "takedown", "volleyBrawl"],
   ];
 
   const updateIndex = (newIndex: number) => {
@@ -37,7 +37,7 @@ const PlayerCard = ({ battleWin, selectedStat }: Props) => {
           {battleWin.player.name}
         </h1>
         <div className="flex flex-row">
-          <h2 className="text-gray-300 mr-2">W/R: </h2>
+          <h2 className="text-gray-300 mr-2"> Overall W/R: </h2>
           <h2>{battleWin.winRate.toFixed(2)}</h2>
         </div>
         <div className="flex flex-row">
@@ -46,7 +46,7 @@ const PlayerCard = ({ battleWin, selectedStat }: Props) => {
         </div>
       </div>
 
-      <div className="flex flex-row w-[700px]">
+      <div className="flex flex-row md:w-[700px] w-[400px] justify-evenly">
         <button
           className="p-2 border-solid border-2 border-gray-500 rounded-md text-1xl hover:bg-gray-600"
           onClick={() => {

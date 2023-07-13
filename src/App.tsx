@@ -17,7 +17,12 @@ function App() {
       </div>
 
       <div className="w-full flex justify-center items-center mt-32">
-        <StatSelector selected={selectedStat} setSelected={setSelectedStat} />
+        <div className="md:w-[900px] w-[500px] flex flex-col md:flex-row md:justify-start justify-center items-center font-['Monomaniac_One',sans-serif] text-2xl md:text-3xl ">
+          <h1 className="md:mr-28 mb-2 md:mb-0">
+            GameMode Statistic Selector:{" "}
+          </h1>
+          <StatSelector selected={selectedStat} setSelected={setSelectedStat} />
+        </div>
       </div>
 
       <div className="w-full relative mt-8 flex flex-col items-center">
